@@ -7,7 +7,9 @@ JavaScriptのオブジェクトは、
 * 真偽値
 * null, undefined
 
-以外はオブジェクトでである（pythonはちなみに全てオブジェクト）
+以外はオブジェクトでである（pythonはちなみに全てオブジェクト）  
+配列や、関数も全てオブジェクトに関数プロトタイプ、配列プロトタイプを継承している。  
+（らしい）
 
 主に（pythonでいうところの辞書）のことをjavascriptでは`オブジェクト`と呼ぶ。  
 
@@ -160,10 +162,24 @@ console.log(check_obj.hasOwnProperty('hoge'));
 以下のコードで列挙が可能である。  
 for in とforの両方で可能だが、取得される順番が保障されないので、順番を保障する必要がある場合は、forを使う必要がある。
 ```js
-// 1. for inを使う方法
+var test_obj = {
+	'num': 1,
+	'str': 'hoge'
+};
 
+// 1. for inを使う方法
+for (var o in test_obj) {
+	if (typeof test_obj[o] !== 'function'){
+		console.log(o + ': ' + test_obj[o]);
+	}
+}
 
 // 2. forを使う方法
+for (var i = 0; i < test_properties.length; i++){
+	if (typeof test_obj[test_properties[i]] !== 'function'){
+		console.log(test_properties[i] + ': ' + test_obj[test_properties[i]]);
+	}
+}
 
 ```
 
@@ -185,6 +201,25 @@ JavaScriptで、グローバル変数を簡単に定義できるというデメ�
 
 以下が例、
 ```js
+// 大文字である必要はない
+var MAIN_MAP = {};
 
+MAIN_MAP.name = {
+	"first": "taro",
+	"last": "yamada"
+};
 
+// 各プロパティーに関数を含め、グローバルから読めないようにすることで、
+// グローバル領域の汚染を最小限にできる７
+MAIN_MAP.friend = {
+	"first": "hanako",
+	"last": "suzuki",
+	hello: function() {
+        // この中なら、varを付け忘れていても、グローバルには影響しない
+        // hoge = "hello";
+		return "Hello Everyone!!"
+	}
+};
+
+console.log(MAIN_MAP.friend.hello());
 ```
