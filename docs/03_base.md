@@ -12,6 +12,12 @@ Pythonとは異なり、インデントは自由
 ### 名前
 1文字以上のアルファベット、数字、アンダースコアが使える  
 以下は予約後なのでNG
+`
+break, case, catch, continue, debugger, default, delete, do, else,
+finally, for, , function, if, in, instanceof, new, return, switch,
+this, throw, try, typeof, var, void, while, with
+`
+
 
 ### 定義済み値
 * true, false ... bool値
