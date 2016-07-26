@@ -8,16 +8,16 @@ Backbone.jsとは・・・？
 
 - オブザーバーパターン
 
-オブザーバーパターン・・？
+オブザーバーパターンとは・・？
 
 - 「オブジェクトの状態を観察するようなプログラムで使われるデザインパターンの一種」
 - JavaScriptはイベントを観察するイベント駆動プログラムが得意⇒クリックしたら～何かする
 - Backbone.jsではオブジェクトの状態変化もイベントとして監視する
 
-MVC
+MVCとは・・・？
 
-- Viewがユーザー、Model、Collectionのイベント監視
-- Model、Collectionは非同期通信(Ajax)でWEBAPIとやりとり
+- Viewがユーザー、Model、Collectionのイベントを監視
+- Model、Collectionは非同期通信(Ajax)でWEBAPIとやりとりを行う
 
 - データを取得すると状態変化してイベント発生
 
