@@ -17,4 +17,6 @@ JavaScript勉強会の資料です。
 ...
 
 ## 参考
-前半部分の資料は基本的に[JavaScript:The Good Parts]()をもとに解説します。
+資料はの幾つかは「Douglas Crockford著 [JavaScript:The Good Parts](https://www.oreilly.co.jp/books/9784873113913/)」をもとに記載しています。  
+ライセンスはMITライセンスとしていますが、コードは「JavaScript:The Good Parts」の内容を元にしているソースが複数含まれます。  
+商用として利用するためにはオライリー・ジャパンの許可が必要なる可能性があるため、営利目的での利用はご遠慮ください。
