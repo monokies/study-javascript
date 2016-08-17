@@ -1,4 +1,4 @@
-#TypeScriptとは
+# TypeScriptとは
 http://www.typescriptlang.org/play/
 
 * オープンソースなプログラム言語。 altJS
