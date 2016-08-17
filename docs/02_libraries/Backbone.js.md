@@ -19,5 +19,5 @@ Backbone.js
 * Model、Collectionは非同期通信(Ajax)でWEBAPIとやりとりを行う
 * データを取得すると状態変化してイベント発生
 
-サンプルコード
+サンプルコード  
 http://qiita.com/opengl-8080/items/36e9b380c64ba7766511
